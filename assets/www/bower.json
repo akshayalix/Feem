@@ -1,0 +1,52 @@
+﻿{
+  "name": "feem_core",
+  "version": "0.0.1",
+  "description": "feem_core web ui",
+  "main": "index.html",
+  "keywords": [
+    "p2p",
+    "file",
+    "transfer"
+  ],
+  "authors": [
+    "fritz.ekwoge@feeperfect.com"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.tryfeem.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.4.6",
+    "angular-carousel": "~0.3.13",
+    "angular-knob": "~0.0.2",
+    "angular-touch": "1.4.6",
+    "angular-wizard": "~0.5.5",
+    "angularjs": "~1.4.6",
+    "animate.css": "~3.3.1",
+    "fileicon.css": "~0.1.0",
+    "ng-letter-avatar": "ngletteravatar#~4.0.0",
+    "ngFitText": "~3.3.3",
+    "ngSmoothScroll": "~2.0.0",
+    "angular-inview": "^1.5.6",
+    "AngularJS-Toaster": "angularjs-toaster#^1.2.0",
+    "angular-sanitize": "^1.5.3",
+    "angular-ios-actionsheet": "^1.1.0",
+    "json3": "^3.3.2",
+    "es5-shim": "^4.5.9",
+    "angular-translate": "^2.11.0",
+    "angular-translate-loader-static-files": "^2.11.0",
+    "angular-translate-storage-local": "^2.11.0",
+    "angular-translate-handler-log": "^2.11.0",
+    "angular-dynamic-locale": "^0.1.32",
+    "angular-i18n": "^1.5.7"
+  },
+  "resolutions": {
+    "angular": "1.4.6"
+  },
+  "devDependencies": {}
+}

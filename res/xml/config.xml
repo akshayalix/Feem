@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget android-packageName="com.feeperfect.airsend.android" id="com.feeperfect.airsend" ios-CFBundleIdentifier="com.feeperfect.airsend.ios" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="FeemBridgeCordova">
+        <param name="android-package" value="feem.FeemBridgeCordova" />
+    </feature>
+    <name>Feem</name>
+    <description> A sample Apache Cordova application that responds to the deviceready event. </description>
+    <author email="fritz.ekwoge@feeperfect.com" href="http://www.feeperfect.com"> Apache Cordova Team </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon src="res/icon.png" />
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="loadUrlTimeoutValue" value="60000" />
+    <preference name="SplashScreen" value="none" />
+    <preference name="windows-target-version" value="10.0" />
+    <preference name="windows-phone-target-version" value="10.0" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="WindowsDefaultUriPrefix" value="ms-appx://" />
+</widget>
