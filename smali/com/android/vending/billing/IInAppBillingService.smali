@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/android/vending/billing/IInAppBillingService;
 .super Ljava/lang/Object;
-.source "IInAppBillingService.java"
+# Removed billing_souce_1
 
 # interfaces
 .implements Landroid/os/IInterface;
