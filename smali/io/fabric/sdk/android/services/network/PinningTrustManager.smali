@@ -469,68 +469,88 @@
 
 # virtual methods
 .method public checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
+    # inserted by apk-mitm to disable certificate pinning
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/security/cert/CertificateException;
-        }
-    .end annotation
+    return-void
 
-    .line 166
-    new-instance p1, Ljava/security/cert/CertificateException;
-
-    const-string p2, "Client certificates not supported!"
-
-    invoke-direct {p1, p2}, Ljava/security/cert/CertificateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    # commented out by apk-mitm to disable old method body
+    #
+    # .locals 0
+    # .annotation system Ldalvik/annotation/Throws;
+    #     value = {
+    #         Ljava/security/cert/CertificateException;
+    #     }
+    # .end annotation
+    #
+    # .line 166
+    # new-instance p1, Ljava/security/cert/CertificateException;
+    #
+    # const-string p2, "Client certificates not supported!"
+    #
+    # invoke-direct {p1, p2}, Ljava/security/cert/CertificateException;-><init>(Ljava/lang/String;)V
+    #
+    # throw p1
 .end method
 
 .method public checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/security/cert/CertificateException;
-        }
-    .end annotation
-
-    .line 171
-    iget-object v0, p0, Lio/fabric/sdk/android/services/network/PinningTrustManager;->cache:Ljava/util/Set;
-
-    const/4 v1, 0x0
-
-    aget-object v2, p1, v1
-
-    invoke-interface {v0, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
+    # inserted by apk-mitm to disable certificate pinning
+    .locals 0
     return-void
 
-    .line 178
-    :cond_0
-    invoke-direct {p0, p1, p2}, Lio/fabric/sdk/android/services/network/PinningTrustManager;->checkSystemTrust([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-
-    .line 179
-    invoke-direct {p0, p1}, Lio/fabric/sdk/android/services/network/PinningTrustManager;->checkPinTrust([Ljava/security/cert/X509Certificate;)V
-
-    .line 180
-    iget-object p2, p0, Lio/fabric/sdk/android/services/network/PinningTrustManager;->cache:Ljava/util/Set;
-
-    aget-object p1, p1, v1
-
-    invoke-interface {p2, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    return-void
+    # commented out by apk-mitm to disable old method body
+    #
+    # .locals 3
+    # .annotation system Ldalvik/annotation/Throws;
+    #     value = {
+    #         Ljava/security/cert/CertificateException;
+    #     }
+    # .end annotation
+    #
+    # .line 171
+    # iget-object v0, p0, Lio/fabric/sdk/android/services/network/PinningTrustManager;->cache:Ljava/util/Set;
+    #
+    # const/4 v1, 0x0
+    #
+    # aget-object v2, p1, v1
+    #
+    # invoke-interface {v0, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    #
+    # move-result v0
+    #
+    # if-eqz v0, :cond_0
+    #
+    # return-void
+    #
+    # .line 178
+    # :cond_0
+    # invoke-direct {p0, p1, p2}, Lio/fabric/sdk/android/services/network/PinningTrustManager;->checkSystemTrust([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
+    #
+    # .line 179
+    # invoke-direct {p0, p1}, Lio/fabric/sdk/android/services/network/PinningTrustManager;->checkPinTrust([Ljava/security/cert/X509Certificate;)V
+    #
+    # .line 180
+    # iget-object p2, p0, Lio/fabric/sdk/android/services/network/PinningTrustManager;->cache:Ljava/util/Set;
+    #
+    # aget-object p1, p1, v1
+    #
+    # invoke-interface {p2, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    #
+    # return-void
 .end method
 
 .method public getAcceptedIssuers()[Ljava/security/cert/X509Certificate;
+    # inserted by apk-mitm to disable certificate pinning
     .locals 1
-
-    .line 184
-    sget-object v0, Lio/fabric/sdk/android/services/network/PinningTrustManager;->NO_ISSUERS:[Ljava/security/cert/X509Certificate;
-
+    const/4 v0, 0x0
+    new-array v0, v0, [Ljava/security/cert/X509Certificate;
     return-object v0
+
+    # commented out by apk-mitm to disable old method body
+    #
+    # .locals 1
+    #
+    # .line 184
+    # sget-object v0, Lio/fabric/sdk/android/services/network/PinningTrustManager;->NO_ISSUERS:[Ljava/security/cert/X509Certificate;
+    #
+    # return-object v0
 .end method
