@@ -1,6 +1,6 @@
 .class Lcom/android/vending/billing/IInAppBillingService$Stub$Proxy;
 .super Ljava/lang/Object;
-.source "IInAppBillingService.java"
+# Removed billing_source
 
 # interfaces
 .implements Lcom/android/vending/billing/IInAppBillingService;
