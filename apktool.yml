@@ -50,10 +50,6 @@ sdkInfo:
 sharedLibrary: false
 sparseResources: false
 unknownFiles:
-  play-services-ads-base.properties: '8'
-  play-services-ads-identifier.properties: '8'
-  play-services-ads-lite.properties: '8'
-  play-services-ads.properties: '8'
   play-services-basement.properties: '8'
   play-services-gass.properties: '8'
   play-services-measurement-base.properties: '8'
