@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/thumb" android:layout_width="@dimen/gridColumnWidth" android:layout_height="@dimen/gridColumnWidth" android:layout_margin="5.0dip" android:src="@drawable/ic_launcher" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+    <View android:id="@id/overlay" android:background="@color/accent" android:visibility="invisible" android:layout_width="@dimen/gridColumnWidth" android:layout_height="@dimen/gridColumnWidth" android:layout_margin="5.0dip" android:alpha="0.5" />
+    <ImageView android:layout_gravity="right" android:id="@id/icon2" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/checkbox_unchecked" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignRight="@id/thumb" />
+</RelativeLayout>

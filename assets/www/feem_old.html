@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head> 
+
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Feem</title>
+
+
+
+
+ <link href="bower_components/animate.css/animate.min.css" rel="stylesheet" type="text/css">
+ <link href="bower_components/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
+ <!-- <link href="bower_components/reveal-js/css/reveal.min.css" rel="stylesheet" type="text/css">
+ <link href="bower_components/reveal-js/css/theme/default.css" rel="stylesheet" type="text/css"> -->
+ <link href="bower_components/font-source-sans-pro/source-sans-pro.css" rel="stylesheet" type="text/css">
+
+ <link href="stylesheets/app.css" rel="stylesheet" type="text/css">
+ <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+ <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body ng-controller='StatusController'> 
+
+    <div class="wrapper" ng-if="splash_progress!=0">
+        
+
+   <table style="top: 0px; left: 0px; width:100%; height:100%;position: absolute">
+        
+        <tr>
+            <td>
+              <center>
+                    <span class="loading"><span class="outerCircle"></span><span class="innerCircle"></span><table width="100%" height="100%"><tr><td><center>{{splash_progress}}</center></td></tr></table></span>
+                    <h1 style="font-weight:100; -webkit-animation-duration: 2s; animation-duration: 2s;" class="animated lightSpeedIn ">Feem Wi-Fi</h1>
+                    <h2 style="font-weight:100">Offline File Transfers.</h2>
+                    <h2 style="font-weight:100">No Internet. No Servers. No Limits.</h2>
+              </center>
+            </td>
+        </tr>
+    </table>
+    </div>
+
+    <div class="wrapper" ng-if="splash_progress==0 && smallscreen">
+
+      <div fragment-friends ng-if="page=='friends'"> </div>
+      <div fragment-help ng-if="page=='help'"> </div>
+        <div fragment-settings ng-if="page=='settings'"> </div>
+        <div fragment-photo-dates ng-if="page=='photo_dates'"> </div>
+        <div fragment-photos-at-date ng-if="page=='photos_at_date'"> </div>
+
+
+    </div>
+
+      <div class="wrapper" ng-if="splash_progress==0 && !smallscreen">
+
+        <div id="left_panel" >
+            <div fragment-friends> </div>
+        </div>
+
+        
+
+         <div id="right_panel" >
+            <div ng-if="page=='help'" fragment-help> </div>
+             <div ng-if="page=='settings'" fragment-settings> </div>
+             <div ng-if="page=='photo_dates'" fragment-photo-dates> </div>
+             <div ng-if="page=='photos_at_date'" fragment-photos-at-date> </div>
+         </div>
+
+    <div id="right_panel" ng-if="page=='messages'">
+
+      <div class="header">
+       <img class="thumbnail" src="images/fee.png"/>
+       <img class="thumbnail" src="images/fee.png"/>
+       <span>Ekwoge Fritz Ekwoge </span>
+       <span>Ekwoge Martin </span>
+      </div>
+
+      <div id="reply">
+      <div class="textarea">
+        <textarea placeholder="What's on your mind..."></textarea>
+      </div>
+            <i ng-click="toggle_menu();" class="icon ion-ios-plus-outline color_red animated infinite pulse jello"></i>
+
+    </div>
+    <div id = "content" class="img_background">
+    </div>
+  </div>
+
+
+</div>
+
+    <div id="menu_panel" ng-if="show_menu"  >
+        <ul class="action2">
+            <li ng-click="toggle_menu();"><i class="icon ion-android-menu color_gray"></i></li>
+
+            <li ng-if="smallscreen" ng-click="switch_page('friends')"><i class="icon ion-ios-home-outline color_gray"></i></li>
+
+            <li ng-click="switch_page('photo_dates')"><i class="icon ion-images color_gray"></i></li>
+            <li ng-click="switch_page('videos')"><i class="icon ion-ios-film-outline  color_gray"></i></li>
+            <li ng-click="switch_page('songs')"><i class="icon ion-ios-musical-notes color_gray"></i></li>
+            <li ng-click="switch_page('apps')"><i class="icon ion-android-apps color_gray"></i></li>
+            <li ng-click="switch_page('files')"><i class="icon ion-ios-folder-outline color_gray"></i></li>
+            <li ng-click="switch_page('messages')"><i class="icon ion-ios-chatboxes-outline color_gray"></i></li>
+            <li ng-click="switch_page('settings')"><i class="icon ion-android-settings color_gray"></i></li>
+            <li ng-click="switch_page('help')"><i class="icon ion-help color_gray"></i></li>
+            <li><i class="icon ion-close-round color_red"></i></li>
+        </ul>
+    </div>
+    <i breadcrumb ng-if="!show_menu"/>
+    <!-- <script src="bower_components/reveal-js/js/reveal.min.js"></script>
+     -->
+<script type="text/javascript" src="cordova.js"></script>
+<script src="bower_components/angular/angular.min.js"> </script>
+<script src="bower_components/angular-touch/angular-touch.min.js"> </script>
+<script src="scripts/app.js"></script>
+
+    <script>
+
+      // // Full list of configuration options available here:
+      // // https://github.com/hakimel/reveal.js#configuration
+      // Reveal.initialize({
+      //   controls: true,
+      //   progress: true,
+      //   history: true,
+      //   center: true,
+
+      //   theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      //   transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+      //   // Parallax scrolling
+      //   // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+      //   // parallaxBackgroundSize: '2100px 900px',
+
+        
+      // });
+
+    </script>
+
+
+
+</body>                    
+</body>
+</html>
