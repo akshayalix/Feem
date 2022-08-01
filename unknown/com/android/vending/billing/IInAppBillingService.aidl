@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.android.vending.billing;
+/* package com.android.vending.billing; */
 
-import android.os.Bundle;
+/* import android.os.Bundle; */
 
 /**
  * InAppBillingService is the service that provides in-app billing version 3 and beyond.
