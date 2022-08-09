@@ -471,7 +471,7 @@ var run_ad = function(){
          }
 
 
-        $rootScope.show_ad = true;
+        $rootScope.show_ad = false;
 
         FeemBridge.show_ad();
 
