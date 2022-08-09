@@ -42,7 +42,7 @@
  * RESULT_ITEM_ALREADY_OWNED = 7 - Failure to purchase since item is already owned
  * RESULT_ITEM_NOT_OWNED = 8 - Failure to consume since item is not owned
  */
-interface IInAppBillingService {
+/* interface IInAppBillingService {
     /**
      * Checks support for the requested billing API version, package and in-app type.
      * Minimum API version supported by this interface is 3.
@@ -52,7 +52,7 @@ interface IInAppBillingService {
      *        and "subs" for subscription.
      * @return RESULT_OK(0) on success, corresponding result code on failures
      */
-    int isBillingSupported(int apiVersion, String packageName, String type);
+    /* int isBillingSupported(int apiVersion, String packageName, String type);
 
     /**
      * Provides details of a list of SKUs
@@ -70,7 +70,7 @@ interface IInAppBillingService {
      *              '{ "productId" : "exampleSku", "type" : "inapp", "price" : "$5.00",
      *                 "title : "Example Title", "description" : "This is an example description" }'
      */
-    Bundle getSkuDetails(int apiVersion, String packageName, String type, in Bundle skusBundle);
+    /* Bundle getSkuDetails(int apiVersion, String packageName, String type, in Bundle skusBundle);
 
     /**
      * Returns a pending intent to launch the purchase flow for an in-app item by providing a SKU,
@@ -102,7 +102,7 @@ interface IInAppBillingService {
      *                                  was signed with the private key of the developer
      *                                  TODO: change this to app-specific keys.
      */
-    Bundle getBuyIntent(int apiVersion, String packageName, String sku, String type,
+    /* Bundle getBuyIntent(int apiVersion, String packageName, String sku, String type,
         String developerPayload);
 
     /**
@@ -129,7 +129,7 @@ interface IInAppBillingService {
      *                                      next set of in-app purchases. Only set if the
      *                                      user has more owned skus than the current list.
      */
-    Bundle getPurchases(int apiVersion, String packageName, String type, String continuationToken);
+    /* Bundle getPurchases(int apiVersion, String packageName, String type, String continuationToken);
 
     /**
      * Consume the last purchase of the given SKU. This will result in this item being removed
@@ -140,5 +140,5 @@ interface IInAppBillingService {
      *        to be consumed
      * @return 0 if consumption succeeded. Appropriate error values for failures.
      */
-    int consumePurchase(int apiVersion, String packageName, String purchaseToken);
-}
+
+
